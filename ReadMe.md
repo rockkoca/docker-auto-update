@@ -2,6 +2,7 @@
 Automatically upgrade container image and restart container
 
 # Usage
+
 ```bash
 # any container's base image starts with image_name will be monitored
 docker run -d \
