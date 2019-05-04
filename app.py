@@ -29,6 +29,8 @@ def main(image_name: str, exact: bool, interval: int):
                 if i > 0:
                     line = re.split(r'\s{2,}', line)
                     if len(line) > 1 and line[1].startswith(image_name) if not exact else line[1] == image_name:
+                        if line[1].startswith('rockkoca/docker-auto-update'):
+                            continue
                         containers.append(line)
             print(containers)
             for container in containers:
