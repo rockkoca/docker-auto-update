@@ -19,7 +19,7 @@ import time
     type=click.IntRange(1, 24),
     default=1,
     help="Check update interval in hours. Range is [1,24]. The default value is 1 hour.")
-def get_all_containers(image_name: str, exact: bool, interval: int):
+def main(image_name: str, exact: bool, interval: int):
     while True:
         try:
             output: str = subprocess.check_output('docker ps', shell=True).decode()
@@ -53,4 +53,4 @@ def get_all_containers(image_name: str, exact: bool, interval: int):
 
 
 if __name__ == '__main__':
-    get_all_containers()
+    main()
