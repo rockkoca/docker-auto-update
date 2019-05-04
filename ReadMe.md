@@ -10,6 +10,15 @@ docker run -d \
     rockkoca/docker-auto-update image_name
 ```
 
+```bash
+# upgrade all images
+docker run -d \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v ~/.docker:/root/.docker \
+    --name dau \
+    rockkoca/docker-auto-update ""
+```
+
 # Thanks
 https://github.com/lavie/runlike
 
