@@ -11,7 +11,7 @@ docker run -d \
 ```
 
 ```bash
-# upgrade all images
+# use an empty name to upgrade all images
 docker run -d \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v ~/.docker:/root/.docker \
