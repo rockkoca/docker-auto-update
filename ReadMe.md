@@ -3,6 +3,7 @@ Automatically upgrade container image and restart container
 
 # Usage
 ```bash
+# any container's base image starts with image_name will be monitored
 docker run -d \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v ~/.docker:/root/.docker \
@@ -11,7 +12,7 @@ docker run -d \
 ```
 
 ```bash
-# use an empty name to upgrade all images
+# use an empty name to monitor and upgrade all containers
 docker run -d \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v ~/.docker:/root/.docker \
