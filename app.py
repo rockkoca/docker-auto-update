@@ -46,7 +46,7 @@ def main(image_name: str, exact: bool, interval: int):
                         f'docker stop {container[-1]};docker system prune -f;{cli};docker ps',
                         shell=True).decode()
                     print(out)
-            time.sleep(interval * 60)
+            time.sleep(interval * 3600)
         except Exception as e:
             print(e)
             raise
